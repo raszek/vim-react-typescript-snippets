@@ -1,0 +1,52 @@
+snippet rc "React Component" b
+import React, { Component } from 'react';
+
+type $1Props = {
+};
+
+export class ${1:`!v expand('%:t:r')`} extends Component<$1Props, {}> {
+
+	render() {
+		return (
+			<div>
+				$2
+			</div>
+		);
+	}
+}
+endsnippet
+
+snippet rsc "React Stateful Component" b
+import React, { Component } from 'react';
+
+type $1Props = {
+};
+
+type $1State = {
+};
+
+export class ${1:`!v expand('%:t:r')`} extends Component<$1Props, $1State> {
+
+	render() {
+		return (
+			<div>
+				$2
+			</div>
+		);
+	}
+}
+endsnippet
+
+snippet rfc "React Function Component" b
+type $1Props = {
+};
+
+export const ${1:`!v expand('%:t:r')`}: React.FC<$1Props> = props => {
+
+	return (
+		<div>
+		$2
+		</div>
+	);
+};
+endsnippet
